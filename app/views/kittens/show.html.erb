@@ -1,0 +1,10 @@
+<h1>Kittens#show</h1>
+<p>Find me in app/views/kittens/show.html.erb</p>
+
+<p>Kitten Name:</p>  <%= @kitten.name%> <br>
+<p>Kitten Age:</p>  <%= @kitten.age%> <br>
+<p>Kitten Cuteness:</p>  <%= @kitten.cuteness%> <br>
+<p>Kitten Softness:</p>  <%= @kitten.softness%> <br>
+
+<%= link_to "Delete Kitten", @kitten, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, method: :delete %>
+<%= link_to "See all the Kittens", controller: "kittens", action: "index" %>

@@ -1,0 +1,21 @@
+<h1>Kittens#index</h1>
+<p>Find me in app/views/kittens/index.html.erb</p>
+
+
+<%= link_to "New Kitten", controller: "kittens", action: "new" %> <br>
+
+<% @kittens.each do |kitten| %>
+    <%= link_to kitten.name, controller: "kittens", action: "show", id: kitten.id %>
+    <%= kitten.age %>
+    <%= kitten.cuteness %>
+    <%= kitten.softness %>
+    <%= link_to "Delete Kitten", controller: "kittens", action: "destroy", id: kitten.id %> 
+    <%= link_to "Edit Kitten", controller: "kittens", action: "edit", id:kitten.id%> <br>
+<% end %>
+
+
+
+    
+
+
+
